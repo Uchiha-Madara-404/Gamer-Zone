@@ -1,0 +1,208 @@
+/* Shared CSS */
+*
+{
+    font-family: "Work Sans";
+}
+body
+{
+    width: 1900px;
+    border: 1px solid red;
+    margin: 0 auto;
+}
+
+/* CSS custom property */
+:root
+{
+    --heading-g-color:#FF42A5;
+
+    --sign-in-button-color: #FF42A5;
+    --go-rouge-button-color: #4EC5F7;
+}
+
+/* Style for navbar */
+.navbar
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+  /* shared CSS for navbar */
+.icon-head , .navbar-link  , .navbar-link-social
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.icon-head img
+{
+    width: 86.041px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.heading
+{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    color: #0B0223;
+}
+.heading span
+{
+    color: var(--heading-g-color);
+}
+.navbar-link a
+{
+    text-decoration: none;
+    color: #3C354F;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.navbar-link-social
+{
+    border-radius: 8px;
+    background: rgba(11, 2, 35, 0.10);
+    justify-content: center;
+    width: 262px;
+    height: 56px;
+}
+.navbar-link-social img
+{
+    width: 33.916px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* Main */
+/* Style for banner */
+.banner
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 148px 0px 0px 0px;
+}
+.banner-content
+{
+    background-image: url(images/Group\ 14.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 900px;
+    height: 700px;
+}
+.banner-content h1
+{
+    color: #0B0223;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.banner-content h2
+{
+    text-align: center;
+    font-size: 95px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.banner-link
+{
+    display: grid;  
+}
+.icon-link
+{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-left: 280px;
+
+}
+/* Shared CSS for banner */
+.banner-link a , .sign-link a
+{
+    text-decoration: none;
+}
+
+.sign-link
+{
+    margin: 42px 0px 0px 280px;
+    display: flex;
+    gap: 50px;
+}
+
+/* Shared CSS for banner */
+.sign-in , .go-rouge
+{
+    color: white;
+    border-radius: 48px;
+    display: inline-flex;
+    padding: 21px 40px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.sign-in
+{
+    background-color: var(--sign-in-button-color);
+}
+.go-rouge
+{
+    background-color: var(--go-rouge-button-color);
+}
+.b-icon
+{
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width:450px) {
+    body
+    {
+        width: auto;
+    }
+
+    /* Responsive-nabvar */
+    .icon-head
+    {
+        justify-content: center;
+    }
+    .navbar , .navbar-link 
+    {
+        flex-direction: column;
+    }
+    /* Responsive-banner */
+    .banner
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+    .banner-content
+    {
+        width: 85%;
+        background-size: contain;
+    }
+    .banner-content h1 , .banner-content h2
+    {
+        font-size: 30px;
+    }
+    .banner-image img
+    {
+        width: 95%;
+    }
+    .icon-link
+    {
+        margin: 0px;
+        justify-content: flex-start;
+    }
+    .sign-link
+    {
+       margin: 40px 0px 0px 0px;
+       justify-content: center;
+    }
+}
