@@ -24,7 +24,8 @@ body
 /* CSS custom property */
 :root
 {
-    --text-color-1:#FF42A5;
+    --text-color-1: #FF42A5;
+    --background-color: #FF42A5;
 
     --button-color-1: #FF42A5;
     ---button-color-2: #4EC5F7;
@@ -142,7 +143,7 @@ body
 }
 
 /* Shared CSS for banner */
-.sign-in , .go-rouge , .dsc-btn /* Here I add ".dsc-btn" and its form description section*/
+.sign-in , .go-rouge , .dsc-btn , .carrer-btn /* Here I add ".dsc-btn" and its form description section*/
 {
     color: white;
     border-radius: 48px;
@@ -178,7 +179,7 @@ body
 {
   text-align: right;
 }
-.description-content > p , .play-instant-content > p
+.description-content > p , .play-instant-content > p , .carrer-content > p
 {
     color: #534C64;
     font-size: 18px;
@@ -328,6 +329,79 @@ body
     margin-top: 300px;
 }
 
+/* Style for Career */
+.carrer
+{
+    display: flex;
+    margin-top: 120px;
+    background-color: var(--background-color);
+    align-items: center;
+    color: #FFF;
+    justify-content: space-between;
+}
+.carrer-content
+{
+    margin-left: 240px;
+}
+.carrer-content > h3
+{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px; /* 125% */
+}
+.carrer-list
+{
+    display: flex;
+}
+.list > li
+{
+    list-style: none;
+    margin: 10px 0px 0px 0px;
+}
+.carrer-content > p , .list > li
+{
+    color: #FFF;
+}
+.carrer-btn
+{
+    color: var(--text-color-1);
+    border-color: #FFF;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+/* Style For Games */
+.games
+{
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 13.13%, rgba(255, 66, 165, 0.03) 87.94%);
+    padding-bottom: 129px;
+    padding-top: 120px;
+}
+.games1 , .games-box , .games2
+{
+    display: flex;
+}
+.games1 , .games2
+{
+    justify-content: center;
+    gap: 27px;
+}
+.games2
+{
+    margin-top: 28px;
+}
+.games-box
+{
+    width: 243px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #FFF;
+    align-items: center;
+    gap: 15px;
+}
+
 
 /* Responsive for mobile */
 @media screen and (max-width:450px) {
@@ -447,4 +521,38 @@ body
         text-align: center;
         margin: 10px;
     }
+    /* Responsive for carrer */
+    .carrer
+    {
+        flex-direction: column;
+    }
+    .carrer-content
+    {
+        margin: 0px;
+        text-align: center;
+    }
+    .carrer-img > img
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .carrer-content > p
+    {
+        width: 90%;
+    }
+    .list > li
+    {
+        width: 50%;
+    }
+    .carrer-btn
+    {
+        margin-right: 50px;
+    }
+    /* Responsive for games */
+    .games > div
+    {
+        display: grid;
+        /* grid-template-rows:  repeat(3, 0.1fr); */
+    }
+
 }
